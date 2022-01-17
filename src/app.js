@@ -7,6 +7,7 @@ const forcast=require(path.join(__dirname,'./utils/forcast'))
 
 const app=express()
 
+const port=process.env.PORT || 3000
 //define paths for Express config
 const publicFolder=path.join(__dirname,'../public')
 
@@ -79,5 +80,5 @@ app.get('*',(req,res)=>{
     }) 
 })
 
-app.listen(3000,()=>{console.log("Server running at 3000");})
+app.listen(port,()=>{console.log("Server running at 3000");})
 
